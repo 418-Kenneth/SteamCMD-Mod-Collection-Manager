@@ -1,24 +1,27 @@
-﻿<Window x:Class="SteamWorkshop_AppID_Downloader.MainWindow"
+﻿<Window x:Class="Steam_Workshop_Collection_Downloader.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:SteamWorkshop_AppID_Downloader"
+        xmlns:local="clr-namespace:Steam_Workshop_Collection_Downloader"
         mc:Ignorable="d"
-        Title="Steam Workshop AppID Downloader" Height="450" Width="800">
-    <Grid Margin="0,0,-8,-1">
+        Title="Steam Workshop Collection Downloader" Height="447.765" Width="390.977" ResizeMode="NoResize">
+    <Grid Margin="0,0,-6,-1" Background="#FFAEAEAE">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Label Content="Game ID:" VerticalAlignment="Top" Margin="11,9,682,0" Height="26"/>
-        <Label Content="Collection ID:" VerticalAlignment="Top" Margin="11,40,682,0" Height="26"/>
-        <TextBox Height="23" Margin="154,12,553,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox Height="23" Margin="154,40,553,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Label Content="Steam CMD Path:" VerticalAlignment="Top" Margin="11,69,682,0" Height="26"/>
-        <Label Content="Install Dir:" VerticalAlignment="Top" Margin="11,100,682,0" Height="26"/>
-        <TextBox Height="23" Margin="154,72,553,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox Height="23" Margin="154,100,553,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Button Content="Path" HorizontalAlignment="Left" Margin="252,100,0,0" VerticalAlignment="Top" Width="30" Height="23"/>
-        <Button Content="Path" HorizontalAlignment="Left" Margin="252,72,0,0" VerticalAlignment="Top" Width="30" Height="23"/>
+        <Label Content="Game ID:" VerticalAlignment="Top" Margin="11,9,0,0" Height="26" HorizontalAlignment="Left" Width="107"/>
+        <Label Content="Collection ID:" VerticalAlignment="Top" Margin="11,40,0,0" Height="26" HorizontalAlignment="Left" Width="107"/>
+        <TextBox x:Name="game_id_textbox" Height="23" Margin="154,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="93"/>
+        <TextBox x:Name="collection_id_textbox" Height="23" Margin="154,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="93"/>
+        <Label Content="Steam CMD Path:" VerticalAlignment="Top" Margin="11,69,0,0" Height="26" HorizontalAlignment="Left" Width="107"/>
+        <Label Content="Install Dir:" VerticalAlignment="Top" Margin="11,100,0,0" Height="26" HorizontalAlignment="Left" Width="107"/>
+        <TextBox x:Name="steam_path_textbox" Height="23" Margin="154,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="220" IsReadOnly="True"/>
+        <TextBox x:Name="install_path_textbox" Height="23" Margin="154,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="220" IsReadOnly="True"/>
+        <Button x:Name="install_getpath_button" Content="Path" HorizontalAlignment="Left" Margin="118,100,0,0" VerticalAlignment="Top" Width="30" Height="23" Click="Install_getpath_button_Click"/>
+        <Button x:Name="steam_getpath_button" Content="Path" HorizontalAlignment="Left" Margin="118,72,0,0" VerticalAlignment="Top" Width="30" Height="23" Click="Steam_getpath_button_Click"/>
+        <TextBox x:Name="log_textbox" HorizontalAlignment="Left" Height="246" Margin="10,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="364" IsReadOnly="True"/>
+        <Label Content="Output:" VerticalAlignment="Top" Margin="11,131,0,0" Height="26" HorizontalAlignment="Left" Width="107"/>
+        <Button x:Name="start_download" Content="START" HorizontalAlignment="Left" Margin="259,12,0,0" VerticalAlignment="Top" Width="115" Height="51" Click="Start_download_Click"/>
     </Grid>
 </Window>

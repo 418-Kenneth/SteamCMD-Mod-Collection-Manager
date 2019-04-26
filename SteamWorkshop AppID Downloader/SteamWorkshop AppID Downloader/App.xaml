@@ -1,7 +1,7 @@
-﻿<Application x:Class="SteamWorkshop_AppID_Downloader.App"
+﻿<Application x:Class="Steam_Workshop_Collection_Downloader.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:SteamWorkshop_AppID_Downloader"
+             xmlns:local="clr-namespace:Steam_Workshop_Collection_Downloader"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          

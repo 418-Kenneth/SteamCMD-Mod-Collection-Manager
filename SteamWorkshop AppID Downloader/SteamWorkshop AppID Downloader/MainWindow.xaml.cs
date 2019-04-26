@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SteamWorkshop_AppID_Downloader
+namespace Steam_Workshop_Collection_Downloader
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,6 +23,21 @@ namespace SteamWorkshop_AppID_Downloader
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Steam_getpath_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Install_getpath_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Start_download_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
