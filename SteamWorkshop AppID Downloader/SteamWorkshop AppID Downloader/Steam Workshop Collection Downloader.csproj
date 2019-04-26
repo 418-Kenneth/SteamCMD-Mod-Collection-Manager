@@ -66,6 +66,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="get_html\get_html.cs" />
+    <Compile Include="id_downloader\download_collection.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -97,10 +99,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="get_html\" />
-    <Folder Include="id_downloader\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="unknown.ico" />
   </ItemGroup>
