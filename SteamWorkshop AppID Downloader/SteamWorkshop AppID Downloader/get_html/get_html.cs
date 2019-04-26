@@ -9,7 +9,7 @@ using System.Collections;
 using System.Net.Http;
 
 using System.IO;
-using HtmlAgilityPack;
+
 
 namespace Steam_Workshop_Collection_Downloader.get_html
 {
@@ -17,23 +17,26 @@ namespace Steam_Workshop_Collection_Downloader.get_html
     {
 
         string collection_base_string = "https://steamcommunity.com/sharedfiles/filedetails/?id=";
-        private List<string> result;
+       
 
         public async Task<List<string>> workshopids(string id)
         {
             HttpClient http = new HttpClient();
-            
-
             HttpResponseMessage response = await http.GetAsync(collection_base_string + id);
-            Stream stream = await response.Content.ReadAsStreamAsync();
+            var data = await response.Content.ReadAsStringAsync();
+
+            string[] stringSeparators = new string[] { "\r\n", "," };
+
+            List<string> resultlist = data.Split(stringSeparators, StringSplitOptions.None).ToList<string>();
+
+            var allids = resultlist.Where(p => p.Contains("SharedFileBindMouseHover")).ToList();
             
-            var doc = new HtmlDocument();
-            doc.LoadHtml(stream.ToString());
-            //var nodes = doc.DocumentNode.SetAttributeValue
+            
+           
+            //Replace("SharedFileBindMouseHover", ""));
+            //var test = resultlist.Select(p => p.Contains("sharedfile_"));
 
-
-            //List<string> result = null;
-
+            List<string> result = null;
             return result;
         }
     }
