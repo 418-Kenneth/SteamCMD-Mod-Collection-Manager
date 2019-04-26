@@ -30,14 +30,15 @@ namespace Steam_Workshop_Collection_Downloader.get_html
             List<string> resultlist = data.Split(stringSeparators, StringSplitOptions.None).ToList<string>();
 
             var allids = resultlist.Where(p => p.Contains("SharedFileBindMouseHover")).ToList();
-            
-            
-           
+
+            var remove_front = allids.Select(s => s.Remove(0,42)).ToList();
+
+            var done = remove_front.Select(s => s.Remove(s.Length-2,2)).ToList();
             //Replace("SharedFileBindMouseHover", ""));
             //var test = resultlist.Select(p => p.Contains("sharedfile_"));
 
-            List<string> result = null;
-            return result;
+            
+            return done;
         }
     }
 }
