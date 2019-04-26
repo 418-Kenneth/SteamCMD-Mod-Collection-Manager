@@ -6,7 +6,19 @@
         xmlns:local="clr-namespace:SteamWorkshop_AppID_Downloader"
         mc:Ignorable="d"
         Title="Steam Workshop AppID Downloader" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Margin="0,0,-8,-1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Game ID:" VerticalAlignment="Top" Margin="11,9,682,0" Height="26"/>
+        <Label Content="Collection ID:" VerticalAlignment="Top" Margin="11,40,682,0" Height="26"/>
+        <TextBox Height="23" Margin="154,12,553,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Height="23" Margin="154,40,553,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Label Content="Steam CMD Path:" VerticalAlignment="Top" Margin="11,69,682,0" Height="26"/>
+        <Label Content="Install Dir:" VerticalAlignment="Top" Margin="11,100,682,0" Height="26"/>
+        <TextBox Height="23" Margin="154,72,553,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Height="23" Margin="154,100,553,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Content="Path" HorizontalAlignment="Left" Margin="252,100,0,0" VerticalAlignment="Top" Width="30" Height="23"/>
+        <Button Content="Path" HorizontalAlignment="Left" Margin="252,72,0,0" VerticalAlignment="Top" Width="30" Height="23"/>
     </Grid>
 </Window>
