@@ -27,6 +27,9 @@ namespace Steam_Workshop_Collection_Downloader
     /// </summary>
     public partial class MainWindow : Window
     {
+        public List<string> items;
+        public string dialogputput = "";
+
         public MainWindow()
         {
             InitializeComponent();
@@ -52,9 +55,11 @@ namespace Steam_Workshop_Collection_Downloader
         /// Launch
         private async void Start_download_Click(object sender, RoutedEventArgs e)
         {
+            log_textbox.Text = "";
             var idlist = new get_html.get_html();
             var result = await idlist.workshopids(collection_id_textbox.Text);
 
+            result.ForEach(a => log_textbox.AppendText(a + Environment.NewLine));
 
         }
     }
