@@ -5,23 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Steam_Workshop_Collection_Downloader"
         mc:Ignorable="d"
-        Title="Steam Workshop Collection Downloader" Height="447.765" Width="390.977" ResizeMode="NoResize">
-    <Grid Margin="0,0,-6,-1" Background="#FFAEAEAE">
+        Title="Steam Workshop Collection Downloader" Height="447.765" Width="548.178" ResizeMode="NoResize">
+    <Grid Margin="0,0,0,0" Background="#FFAEAEAE">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Label Content="Game ID:" VerticalAlignment="Top" Margin="11,9,0,0" Height="26" HorizontalAlignment="Left" Width="107"/>
         <Label Content="Collection ID:" VerticalAlignment="Top" Margin="11,40,0,0" Height="26" HorizontalAlignment="Left" Width="107"/>
-        <TextBox x:Name="game_id_textbox" Height="23" Margin="154,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="93"/>
-        <TextBox x:Name="collection_id_textbox" Height="23" Margin="154,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="93"/>
+        <TextBox x:Name="game_id_textbox" Height="23" Margin="154,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="143"/>
+        <TextBox x:Name="collection_id_textbox" Height="23" Margin="154,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="143" Text="1705826552"/>
         <Label Content="Steam CMD Path:" VerticalAlignment="Top" Margin="11,69,0,0" Height="26" HorizontalAlignment="Left" Width="107"/>
         <Label Content="Install Dir:" VerticalAlignment="Top" Margin="11,100,0,0" Height="26" HorizontalAlignment="Left" Width="107"/>
-        <TextBox x:Name="steam_path_textbox" Height="23" Margin="154,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="220" IsReadOnly="True"/>
-        <TextBox x:Name="install_path_textbox" Height="23" Margin="154,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="220" IsReadOnly="True"/>
+        <TextBox x:Name="steam_path_textbox" Height="23" Margin="154,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="363" IsReadOnly="True"/>
+        <TextBox x:Name="install_path_textbox" Height="23" Margin="154,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="363" IsReadOnly="True"/>
         <Button x:Name="install_getpath_button" Content="Path" HorizontalAlignment="Left" Margin="118,100,0,0" VerticalAlignment="Top" Width="30" Height="23" Click="Install_getpath_button_Click"/>
         <Button x:Name="steam_getpath_button" Content="Path" HorizontalAlignment="Left" Margin="118,72,0,0" VerticalAlignment="Top" Width="30" Height="23" Click="Steam_getpath_button_Click"/>
-        <TextBox x:Name="log_textbox" HorizontalAlignment="Left" Height="246" Margin="10,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="364" IsReadOnly="True"/>
+        <TextBox x:Name="log_textbox" HorizontalAlignment="Left" Height="246" Margin="10,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="507" IsReadOnly="True"/>
         <Label Content="Output:" VerticalAlignment="Top" Margin="11,131,0,0" Height="26" HorizontalAlignment="Left" Width="107"/>
-        <Button x:Name="start_download" Content="START" HorizontalAlignment="Left" Margin="259,12,0,0" VerticalAlignment="Top" Width="115" Height="51" Click="Start_download_Click"/>
+        <Button x:Name="start_download" Content="START" HorizontalAlignment="Left" Margin="302,12,0,0" VerticalAlignment="Top" Width="215" Height="51" Click="Start_download_Click"/>
     </Grid>
 </Window>
