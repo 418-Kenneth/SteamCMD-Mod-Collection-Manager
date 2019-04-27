@@ -5,11 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
 
-namespace Steam_Workshop_Collection_Downloader.SteamCMD
+namespace Steam_Workshop_Collection_Downloader.steamcmd
 {
-    public class SteamCMDexe
+    public class steamcmd_silent_exe
     {
-
         public void LaunchCommandLineApp()
         {
             // For the example
@@ -20,7 +19,7 @@ namespace Steam_Workshop_Collection_Downloader.SteamCMD
             ProcessStartInfo startInfo = new ProcessStartInfo();
             startInfo.CreateNoWindow = false;
             startInfo.UseShellExecute = false;
-            startInfo.FileName = "steamcmd.exe";
+            startInfo.FileName = "dcm2jpg.exe";
             startInfo.WindowStyle = ProcessWindowStyle.Hidden;
             startInfo.Arguments = "-f j -o \"" + ex1 + "\" -z 1.0 -s y " + ex2;
 
