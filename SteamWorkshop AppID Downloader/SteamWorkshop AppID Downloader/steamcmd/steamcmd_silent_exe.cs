@@ -9,9 +9,9 @@ namespace Steam_Workshop_Collection_Downloader.steamcmd
 {
     public class steamcmd_silent_exe
     // example of code line to download
-    //"steamcmd.exe" +login user password +set_steam_guard_code ####  +force_install_dir c:\does\not\matter +"workshop_download_item 107410 463939057" validate +quit
+    //"steamcmd.exe" +login user password +set_steam_guard_code ####  +force_install_dir c:\does\not\matter +"workshop_download_item 107410 463939057" +"workshop_download_item 107410 463939057" +"workshop_download_item 107410 463939057" +"workshop_download_item 107410 463939057" validate +quit
     {
-        public void LaunchCommandLineApp()
+        public int LaunchCommandLineApp(string gameid, List<string> modid, string steamdir, string steampass, string steamuser, string steamauth)
         {
             // For the example
             const string ex1 = "+login";
@@ -43,9 +43,11 @@ namespace Steam_Workshop_Collection_Downloader.steamcmd
                 {
                     exeProcess.WaitForExit();
                 }
+                return 0;
             }
             catch
             {
+                return -1;
                 // Log error.
             }
         }
