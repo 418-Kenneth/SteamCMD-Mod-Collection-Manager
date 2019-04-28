@@ -17,12 +17,14 @@ namespace Steam_Workshop_Collection_Downloader.steamcmd
             const string ex1 = "+login";
             const string ex2 = "+set_steam_guard_code";
             const string ex3 = "+force_install_dir";
-            const string ex4 = "";
+            const string ex4 = "+\"workshop_download_item";
             const string ex5 = "validate";
             const string ex6 = "+quit";
-            //const string ex7 = "";
-            //const string ex8 = "";
+            //const string ex7 = "validate";
+            //const string ex8 = "+quit";
             //const string ex9 = "";
+
+
 
 
             // Use ProcessStartInfo class
