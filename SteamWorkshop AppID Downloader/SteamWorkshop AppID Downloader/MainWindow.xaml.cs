@@ -55,8 +55,12 @@ namespace Steam_Workshop_Collection_Downloader
         /// Launch
         private async void Start_download_Click(object sender, RoutedEventArgs e)
         {
-            //log_textbox.Text = "";
-            //var idlist = new get_html.get_html();
+            log_textbox.Text = "";
+            var steamexe = new steamcmd.steamcmd_silent_exe();
+            var idlist = new get_html.get_html();
+            var result = await idlist.workshopids(collection_id_textbox.Text);
+
+            var feedback = steamexe.LaunchCommandLineApp(game_id_textbox.Text, result, steam_path_textbox.Text, SteamPasswordBox.Password, steam_username_textbox.Text, AuthTextbox.Text);
             //var result = await idlist.workshopids(collection_id_textbox.Text);
 
             //result.ForEach(a => log_textbox.AppendText(a + Environment.NewLine));
