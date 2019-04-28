@@ -8,12 +8,22 @@ using System.Diagnostics;
 namespace Steam_Workshop_Collection_Downloader.steamcmd
 {
     public class steamcmd_silent_exe
+    // example of code line to download
+    //"steamcmd.exe" +login user password +set_steam_guard_code ####  +force_install_dir c:\does\not\matter +"workshop_download_item 107410 463939057" validate +quit
     {
         public void LaunchCommandLineApp()
         {
             // For the example
-            const string ex1 = "C:\\";
-            const string ex2 = "C:\\Dir";
+            const string ex1 = "+login";
+            const string ex2 = "+set_steam_guard_code";
+            const string ex3 = "+force_install_dir";
+            const string ex4 = "";
+            const string ex5 = "validate";
+            const string ex6 = "+quit";
+            //const string ex7 = "";
+            //const string ex8 = "";
+            //const string ex9 = "";
+
 
             // Use ProcessStartInfo class
             ProcessStartInfo startInfo = new ProcessStartInfo();
