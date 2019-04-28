@@ -19,7 +19,7 @@ namespace Steam_Workshop_Collection_Downloader.steamcmd
             ProcessStartInfo startInfo = new ProcessStartInfo();
             startInfo.CreateNoWindow = false;
             startInfo.UseShellExecute = false;
-            startInfo.FileName = "dcm2jpg.exe";
+            startInfo.FileName = "SteamCMD.exe";
             startInfo.WindowStyle = ProcessWindowStyle.Hidden;
             startInfo.Arguments = "-f j -o \"" + ex1 + "\" -z 1.0 -s y " + ex2;
 

@@ -23,5 +23,8 @@
         <TextBox x:Name="log_textbox" HorizontalAlignment="Left" Height="246" Margin="10,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="507" IsReadOnly="True"/>
         <Label Content="Output:" VerticalAlignment="Top" Margin="11,131,0,0" Height="26" HorizontalAlignment="Left" Width="107"/>
         <Button x:Name="start_download" Content="START" HorizontalAlignment="Left" Margin="302,12,0,0" VerticalAlignment="Top" Width="215" Height="51" Click="Start_download_Click"/>
+        <TextBox x:Name="SteamUsernameTextbox" HorizontalAlignment="Left" Height="23" Margin="224,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="AuthTextbox" HorizontalAlignment="Left" Height="23" Margin="357,131,0,0" TextWrapping="Wrap" Text="Auth code goes here" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox x:Name="SteamPasswordBox" HorizontalAlignment="Left" Margin="87,136,0,0" VerticalAlignment="Top" Width="137"/>
     </Grid>
 </Window>
