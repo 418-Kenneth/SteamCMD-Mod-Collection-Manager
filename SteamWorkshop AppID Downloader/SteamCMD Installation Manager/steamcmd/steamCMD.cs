@@ -5,25 +5,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
 
-namespace Steam_Workshop_Collection_Downloader.steamcmd
+namespace SteamCMD_Installation_Manager.steamcmd
 {
-    public class steamcmd_silent_exe
+    public class steamCMD
     // example of code line to download
     //"steamcmd.exe" +login user password +set_steam_guard_code ####  +force_install_dir c:\does\not\matter +"workshop_download_item 107410 463939057" +"workshop_download_item 107410 463939057" +"workshop_download_item 107410 463939057" +"workshop_download_item 107410 463939057" validate +quit
     {
-        public int LaunchCommandLineApp(string gameid, List<string> modid, string installdir, string steampass, string steamuser, string steamauth, string steamdir)
+        public int download_mods(string gameid, List<string> modid, string installdir, string steampass, string steamuser, string steamauth, string steamdir)
         {
 
-            modid.ForEach(a =>
-            {
- 
+            var modstring = "";
+
+            modid.ForEach(p => modstring = p);
                 // Use ProcessStartInfo class
                 ProcessStartInfo startInfo = new ProcessStartInfo();
                 startInfo.CreateNoWindow = false;
                 startInfo.UseShellExecute = false;
                 startInfo.FileName = steamdir;
                 startInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                startInfo.Arguments = string.Format("+login {0} {1} +set_steam_guard_code {2} +force_install_dir {3} +\"workshop_download_item {4} {5}\" validate +quit", steamuser, steampass, steamauth, installdir, gameid, a);
+                startInfo.Arguments = string.Format("+login {0} {1} +set_steam_guard_code {2} +force_install_dir {3} +\"workshop_download_item {4} {5}\" validate +quit", steamuser, steampass, steamauth, installdir, gameid, modid);
 
                 try
                 {
@@ -33,16 +33,19 @@ namespace Steam_Workshop_Collection_Downloader.steamcmd
                     {
                         exeProcess.WaitForExit();
                     }
-                    
+
+                    return 0;
                 }
+
                 catch
                 {
-                    
+
+                    return -1;
                     // Log error.
                 }
 
-            });
-            return 0;
+         
+            
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Steam_Workshop_Collection_Downloader
+namespace SteamCMD_Installation_Manager
 {
     /// <summary>
     /// Interaction logic for App.xaml

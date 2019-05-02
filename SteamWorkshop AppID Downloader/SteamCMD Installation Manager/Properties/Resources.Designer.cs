@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Steam_Workshop_Collection_Downloader.Properties {
+namespace SteamCMD_Installation_Manager.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Steam_Workshop_Collection_Downloader.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Steam_Workshop_Collection_Downloader.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SteamCMD_Installation_Manager.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

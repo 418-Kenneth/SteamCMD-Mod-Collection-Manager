@@ -11,7 +11,7 @@ using System.Net.Http;
 using System.IO;
 
 
-namespace Steam_Workshop_Collection_Downloader.get_html
+namespace SteamCMD_Installation_Manager.get_html
 {
     public class get_html
     {
