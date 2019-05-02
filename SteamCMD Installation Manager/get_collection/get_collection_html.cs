@@ -16,6 +16,12 @@ namespace SteamCMD_Installation_Manager.get_collection_html
     public class get_collection_html
     {
         string collection_base_string = "https://steamcommunity.com/sharedfiles/filedetails/?id=";      
+
+        /// <summary>
+        /// Get ID's Async
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public async Task<List<string>> workshopids(string id)
         {
             HttpClient http = new HttpClient();
