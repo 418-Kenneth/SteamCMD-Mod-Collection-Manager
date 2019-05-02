@@ -11,9 +11,9 @@ using System.Net.Http;
 using System.IO;
 
 
-namespace SteamCMD_Installation_Manager.get_html
+namespace SteamCMD_Installation_Manager.get_collection_html
 {
-    public class get_html
+    public class get_collection_html
     {
         string collection_base_string = "https://steamcommunity.com/sharedfiles/filedetails/?id=";      
         public async Task<List<string>> workshopids(string id)
