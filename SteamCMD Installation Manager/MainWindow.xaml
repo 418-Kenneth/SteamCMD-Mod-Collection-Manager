@@ -26,7 +26,7 @@
         <TextBox x:Name="steam_username_textbox" HorizontalAlignment="Left" Height="23" Margin="154,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="363"/>
         <TextBox x:Name="AuthTextbox" HorizontalAlignment="Left" Height="23" Margin="406,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
         <PasswordBox x:Name="SteamPasswordBox" HorizontalAlignment="Left" Margin="154,156,0,0" VerticalAlignment="Top" Width="183" Height="23"/>
-        <Button x:Name="button" Content="Get IDs" HorizontalAlignment="Left" Margin="447,12,0,0" VerticalAlignment="Top" Width="70" Height="51" Click="Button_Click"/>
+        <Button x:Name="Get_Ids_Button" Content="Get IDs" HorizontalAlignment="Left" Margin="447,12,0,0" VerticalAlignment="Top" Width="70" Height="51" Click="Get_Ids_Button_Click"/>
         <Label x:Name="label" Content="Steam Username:" HorizontalAlignment="Left" Margin="11,125,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.196,0.188"/>
         <Label x:Name="label1" Content="Auth Code:" HorizontalAlignment="Left" Margin="337,153,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label2" Content="Steam Password:" HorizontalAlignment="Left" Margin="11,153,0,0" VerticalAlignment="Top"/>
