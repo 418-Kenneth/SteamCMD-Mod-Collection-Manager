@@ -43,7 +43,7 @@ namespace SteamCMD_Installation_Manager
             var steamexe = new steamcmd.steamCMD();
             var idlist = new get_collection_html.get_collection_html();
             var result = await idlist.workshopids(collection_id_textbox.Text);
-            var feedback = steamexe.download_mods(game_id_textbox.Text, result, install_path_textbox.Text, SteamPasswordBox.Password, steam_username_textbox.Text, AuthTextbox.Text, steam_path_textbox.Text);
+            var feedback = steamexe.download_mods(game_id_textbox.Text, result, install_path_textbox.Text, SteamPasswordBox.Password, steam_username_textbox.Text, steam_path_textbox.Text);
             //var result = await idlist.workshopids(collection_id_textbox.Text);
 
             //result.ForEach(a => log_textbox.AppendText(a + Environment.NewLine));
