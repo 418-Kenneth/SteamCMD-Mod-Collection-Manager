@@ -34,6 +34,8 @@ steps:
     action: 'edit'
     target: '$(Build.SourceVersion)'
     tag: '1.0.0.2'
-    title: 'SteamCMD Mod Collection Manager'
+    title: 'SteamCMD Mod Collection Manager - Alpha v1.0.0.2'
+    assets: '$(Build.ArtifactStagingDirectory)/*.exe'
     isPreRelease: true
-    addChangeLog: false
+    changeLogCompareToRelease: 'lastFullRelease'
+    changeLogType: 'commitBased'
