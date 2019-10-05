@@ -56,6 +56,24 @@ namespace SteamCMD_Installation_Manager
             result.ForEach(a => log_textbox.AppendText(a + Environment.NewLine));
         }
 
-    
+        private void anony_btn_Click(object sender, RoutedEventArgs e)
+        {
+            if((string)anony_btn.Content == "ON")
+            {
+                anony_btn.Content = "OFF";
+                steam_username_textbox.Text = "";
+                SteamPasswordBox.Password = "";
+                steam_username_textbox.IsEnabled = true;
+                SteamPasswordBox.IsEnabled = true;
+            }
+            else
+            {
+                anony_btn.Content = "ON";
+                steam_username_textbox.Text = "anonymous";
+                SteamPasswordBox.Password = "";
+                steam_username_textbox.IsEnabled = false;
+                SteamPasswordBox.IsEnabled = false;
+            }
+        }
     }
 }
