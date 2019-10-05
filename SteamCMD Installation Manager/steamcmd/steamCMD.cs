@@ -46,11 +46,11 @@ namespace SteamCMD_Installation_Manager.SteamCMD
                 Process exe = new Process();
                 exe.StartInfo = startInfo;
                 exe.Start();
-                var result = exe.StandardOutput.ReadToEnd();
+                //var result = exe.StandardOutput.ReadToEnd();
                 exe.WaitForExit();
                 
                 exe.Dispose();
-                return result;
+                return "Success";
             }
             catch
             {
