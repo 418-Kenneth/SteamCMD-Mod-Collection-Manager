@@ -37,6 +37,8 @@ steps:
     tagSource: 'userSpecifiedTag'
     tag: '1.0.0.3'
     title: 'SteamCMD Mod Collection Manager - Alpha v1.0.0.2'
-    assets: '$(Build.ArtifactStagingDirectory)/*.exe'
+    assets: |
+      $(Build.ArtifactStagingDirectory)/*
+      $(Agent.ReleaseDirectory)/*
     isPreRelease: true
     addChangeLog: false
