@@ -33,7 +33,6 @@ namespace SteamCMD_Installation_Manager.SteamCMD
             ProcessStartInfo startInfo = new ProcessStartInfo();
             startInfo.CreateNoWindow = false;
             startInfo.UseShellExecute = false;
-            startInfo.WorkingDirectory = steamdir;
             startInfo.FileName = steamdir;
             startInfo.WindowStyle = ProcessWindowStyle.Hidden;
             startInfo.Arguments = string.Format("+login {0} {1} +force_install_dir '{2}' {3} validate +quit", steamuser, steampass, installdir, modstring);
