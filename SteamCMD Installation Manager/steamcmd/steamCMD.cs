@@ -37,7 +37,7 @@ namespace SteamCMD_Installation_Manager.SteamCMD
             startInfo.FileName = steamdir;
             startInfo.WindowStyle = ProcessWindowStyle.Hidden;
             startInfo.Arguments = string.Format("+login {0} {1} +force_install_dir '{2}' {3} validate +quit", steamuser, steampass, installdir, modstring);
-            MessageBox.Show(startInfo.Arguments,"string to run", MessageBoxButton.OK);
+            return startInfo.Arguments;
             
 
             try
