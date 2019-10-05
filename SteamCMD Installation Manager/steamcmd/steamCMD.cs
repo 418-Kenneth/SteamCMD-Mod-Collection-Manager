@@ -35,7 +35,7 @@ namespace SteamCMD_Installation_Manager.SteamCMD
             startInfo.UseShellExecute = false;
             startInfo.FileName = steamdir;
             startInfo.WindowStyle = ProcessWindowStyle.Hidden;
-            startInfo.Arguments = string.Format($"+login {0} {1} +force_install_dir '{2}' {3} validate +quit", steamuser, steampass, installdir, modstring);
+            startInfo.Arguments = string.Format("+login {0} {1} +force_install_dir '{2}' {3} validate +quit", steamuser, steampass, installdir, modstring);
 
             try
             {
@@ -77,7 +77,7 @@ namespace SteamCMD_Installation_Manager.SteamCMD
             startInfo.UseShellExecute = false;
             startInfo.FileName = steamdir;
             startInfo.WindowStyle = ProcessWindowStyle.Hidden;
-            startInfo.Arguments = string.Format($"+login {0} {1} +set_steam_guard_code {2} +force_install_dir {3} +\"workshop_download_item {4} {5}\" validate +quit", steamuser, steampass, steamauth, installdir, gameid, modid);
+            startInfo.Arguments = string.Format("+login {0} {1} +set_steam_guard_code {2} +force_install_dir {3} +\"workshop_download_item {4} {5}\" validate +quit", steamuser, steampass, steamauth, installdir, gameid, modid);
 
             try
             {
