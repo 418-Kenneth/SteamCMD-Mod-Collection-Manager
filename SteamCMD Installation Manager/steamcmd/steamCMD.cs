@@ -23,7 +23,7 @@ namespace SteamCMD_Installation_Manager.SteamCMD
         /// <param name="steamuser"></param>
         /// <param name="steamdir"></param>
         /// <returns></returns>
-        public int DownloadMods(string gameid, List<string> modid, string installdir, string steampass, string steamuser, string steamdir)
+        public string DownloadMods(string gameid, List<string> modid, string installdir, string steampass, string steamuser, string steamdir)
         {
             var modstring = "";
 
@@ -46,11 +46,11 @@ namespace SteamCMD_Installation_Manager.SteamCMD
                 exe.Start();
                 exe.WaitForExit();
                 exe.Dispose();
-                return 0;
+                return exe.StandardOutput.ReadLine();
             }
             catch
             {
-                return -1;
+                return "Error";
                 // Log error.
             }
         }
@@ -66,7 +66,7 @@ namespace SteamCMD_Installation_Manager.SteamCMD
         /// <param name="steamauth"></param>
         /// <param name="steamdir"></param>
         /// <returns></returns>
-        public int InstallServer(string gameid, List<string> modid, string installdir, string steampass, string steamuser, string steamauth, string steamdir)
+        public string InstallServer(string gameid, List<string> modid, string installdir, string steampass, string steamuser, string steamauth, string steamdir)
         {
             var modstring = "";
 
@@ -88,12 +88,12 @@ namespace SteamCMD_Installation_Manager.SteamCMD
                 exe.Start();
                 exe.WaitForExit();
                 exe.Dispose();
-                return 0;
+                return exe.StandardOutput.ReadLine();
             }
 
             catch
             {
-                return -1;
+                return "Error";
                 // Log error.
             }
         }

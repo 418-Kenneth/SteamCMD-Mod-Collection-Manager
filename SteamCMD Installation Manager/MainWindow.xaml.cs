@@ -47,7 +47,7 @@ namespace SteamCMD_Installation_Manager
         }
 
 
-        private async void Get_Ids_Button_Click(object sender, RoutedEventArgs e)
+        private async void RetriveModCollection(object sender, RoutedEventArgs e)
         {
             log_textbox.Text = "";
             var idlist = new HTTP_Readers.Get_Modcollection();
@@ -55,5 +55,7 @@ namespace SteamCMD_Installation_Manager
 
             result.ForEach(a => log_textbox.AppendText(a + Environment.NewLine));
         }
+
+    
     }
 }

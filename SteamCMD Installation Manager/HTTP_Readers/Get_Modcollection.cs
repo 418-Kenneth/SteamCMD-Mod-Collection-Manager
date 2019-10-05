@@ -30,7 +30,7 @@ namespace SteamCMD_Installation_Manager.HTTP_Readers
                 HttpResponseMessage response = await httpclient.GetAsync(collection_base_string + id);
                 var data = await response.Content.ReadAsStringAsync();
                 string[] stringSeparators = new string[] { "\r\n", "," };
-                List<string> result = data.Split(stringSeparators, StringSplitOptions.None).ToList<string>().Where(p => p.Contains("SharedFileBindMouseHover")).Select(s => s.Remove(0, 42)).Select(b => b.Remove(b.Length - 2, 2)).ToList();
+                List<string> result = data.Split(stringSeparators, StringSplitOptions.None).ToList<string>().Where(p => p.Contains("SharedFileBindMouseHover")).Select(s => s.Remove(0, 42)).Select(b => b.Remove(b.Length - 1, 2)).ToList();
                 httpclient.Dispose();
                 response.Dispose();
                 return result;

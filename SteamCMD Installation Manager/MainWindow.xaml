@@ -12,7 +12,7 @@
         </Grid.ColumnDefinitions>
         <Label Content="Game ID:" VerticalAlignment="Top" Margin="11,9,0,0" Height="26" HorizontalAlignment="Left" Width="107"/>
         <Label Content="Collection ID:" VerticalAlignment="Top" Margin="11,40,0,0" Height="26" HorizontalAlignment="Left" Width="107"/>
-        <TextBox x:Name="game_id_textbox" Height="23" Margin="154,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="143"/>
+        <TextBox x:Name="game_id_textbox" Height="23" Margin="154,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="143" Text="107410"/>
         <TextBox x:Name="collection_id_textbox" Height="23" Margin="154,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="143" Text="1136112705"/>
         <Label Content="Steam CMD Path:" VerticalAlignment="Top" Margin="11,69,0,0" Height="26" HorizontalAlignment="Left" Width="107"/>
         <Label Content="Install Dir:" VerticalAlignment="Top" Margin="11,100,0,0" Height="26" HorizontalAlignment="Left" Width="107"/>
@@ -23,10 +23,10 @@
         <TextBox x:Name="log_textbox" HorizontalAlignment="Left" Height="198" Margin="10,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="507" IsReadOnly="True"/>
         <Label Content="Output:" VerticalAlignment="Top" Margin="11,179,0,0" Height="26" HorizontalAlignment="Left" Width="107"/>
         <Button x:Name="start_download" Content="START DOWNLOADS" HorizontalAlignment="Left" Margin="302,12,0,0" VerticalAlignment="Top" Width="140" Height="51" Click="Start_download_Click"/>
-        <TextBox x:Name="steam_username_textbox" HorizontalAlignment="Left" Height="23" Margin="154,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="363"/>
+        <TextBox x:Name="steam_username_textbox" HorizontalAlignment="Left" Height="23" Margin="154,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="363" Text="rxoo7"/>
         <TextBox x:Name="AuthTextbox" HorizontalAlignment="Left" Height="23" Margin="406,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111" Text="not in use" IsReadOnly="True"/>
         <PasswordBox x:Name="SteamPasswordBox" HorizontalAlignment="Left" Margin="154,156,0,0" VerticalAlignment="Top" Width="183" Height="23"/>
-        <Button x:Name="Get_Ids_Button" Content="Get IDs" HorizontalAlignment="Left" Margin="447,12,0,0" VerticalAlignment="Top" Width="70" Height="51" Click="Get_Ids_Button_Click"/>
+        <Button x:Name="Get_Ids_Button" Content="Retrieve&#xD;&#xA;Mod's" HorizontalAlignment="Left" Margin="447,12,0,0" VerticalAlignment="Top" Width="70" Height="51" Click="RetriveModCollection"/>
         <Label x:Name="label" Content="Steam Username:" HorizontalAlignment="Left" Margin="11,125,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.196,0.188"/>
         <Label x:Name="label1" Content="Auth Code:" HorizontalAlignment="Left" Margin="337,153,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label2" Content="Steam Password:" HorizontalAlignment="Left" Margin="11,153,0,0" VerticalAlignment="Top"/>
