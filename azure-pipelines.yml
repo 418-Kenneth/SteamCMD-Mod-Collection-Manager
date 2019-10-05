@@ -36,5 +36,5 @@ steps:
     tag: '1.0.0.2'
     title: 'SteamCMD Mod Collection Manager'
     isPreRelease: true
-    changeLogCompareToRelease: 'lastFullRelease'
-    changeLogType: 'commitBased'
+    addChangeLog: false
+    assets: $(Build.ArtifactStagingDirectory)/*.exe
