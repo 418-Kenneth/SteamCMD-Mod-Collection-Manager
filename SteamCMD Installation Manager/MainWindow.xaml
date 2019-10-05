@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SteamCMD_Installation_Manager"
         mc:Ignorable="d"
-        Title="Steam Workshop Collection Downloader" Height="447.765" Width="542.502" ResizeMode="NoResize">
+        Title="SteamCMD Installation Manager" Height="447.765" Width="542.502" ResizeMode="NoResize">
     <Grid Background="#FFAEAEAE">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>

@@ -40,10 +40,10 @@ namespace SteamCMD_Installation_Manager
         private async void Start_download_Click(object sender, RoutedEventArgs e)
         {
             log_textbox.Text = "";
-            var steamexe = new steamcmd.steamCMD();
-            var idlist = new get_collection_html.get_collection_html();
+            var steamexe = new SteamCMD.steamCMD();
+            var idlist = new HTTP_Readers.Get_Modcollection();
             var result = await idlist.workshopids(collection_id_textbox.Text);
-            var feedback = steamexe.download_mods(game_id_textbox.Text, result, install_path_textbox.Text, SteamPasswordBox.Password, steam_username_textbox.Text, steam_path_textbox.Text);
+            var feedback = steamexe.DownloadMods(game_id_textbox.Text, result, install_path_textbox.Text, SteamPasswordBox.Password, steam_username_textbox.Text, steam_path_textbox.Text);
             //var result = await idlist.workshopids(collection_id_textbox.Text);
 
             //result.ForEach(a => log_textbox.AppendText(a + Environment.NewLine));
@@ -54,7 +54,7 @@ namespace SteamCMD_Installation_Manager
         private async void Get_Ids_Button_Click(object sender, RoutedEventArgs e)
         {
             log_textbox.Text = "";
-            var idlist = new get_collection_html.get_collection_html();
+            var idlist = new HTTP_Readers.Get_Modcollection();
             var result = await idlist.workshopids(collection_id_textbox.Text);
 
             result.ForEach(a => log_textbox.AppendText(a + Environment.NewLine));
