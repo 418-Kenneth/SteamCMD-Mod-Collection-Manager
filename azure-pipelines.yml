@@ -35,7 +35,7 @@ steps:
     action: 'create'
     target: '$(Build.SourceVersion)'
     tagSource: 'userSpecifiedTag'
-    tag: '1.0.0.3'
+    tag: '1.0.0.4'
     title: 'SteamCMD Mod Collection Manager - Alpha v1.0.0.2'
     assets: |
       $(Build.ArtifactStagingDirectory)/*
