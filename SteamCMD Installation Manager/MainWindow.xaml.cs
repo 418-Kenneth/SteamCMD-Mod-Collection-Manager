@@ -43,7 +43,7 @@ namespace SteamCMD_Installation_Manager
             var steamexe = new SteamCMD.steamCMD();
             var idlist = new HTTP_Readers.Get_Modcollection();
             var result = await idlist.workshopids(collection_id_textbox.Text);
-            var feedback = steamexe.DownloadMods(game_id_textbox.Text, result, install_path_textbox.Text, SteamPasswordBox.Password, steam_username_textbox.Text, steam_path_textbox.Text);
+            log_textbox.Text = steamexe.DownloadMods(game_id_textbox.Text, result, install_path_textbox.Text, SteamPasswordBox.Password, steam_username_textbox.Text, steam_path_textbox.Text);
         }
 
 
