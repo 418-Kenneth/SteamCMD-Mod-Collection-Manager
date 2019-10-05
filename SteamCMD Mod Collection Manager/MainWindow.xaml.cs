@@ -4,7 +4,7 @@ using System.Windows;
 using System.Windows.Forms;
 using System.Threading;
 
-namespace SteamCMD_Installation_Manager
+namespace SteamCMD_Mod_Collection_Manager
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

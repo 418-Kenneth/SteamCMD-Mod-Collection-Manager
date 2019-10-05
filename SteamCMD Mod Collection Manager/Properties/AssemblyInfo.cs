@@ -7,13 +7,13 @@ using System.Windows;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SteamWorkshop AppID Downloader")]
-[assembly: AssemblyDescription("Download Workshop Content from Workshop Collections")]
+[assembly: AssemblyTitle("SteamCMD Mod Collection Manager")]
+[assembly: AssemblyDescription("Download Workshop Collections")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Lonewolf")]
-[assembly: AssemblyProduct("SteamWorkshop AppID Downloader")]
-[assembly: AssemblyCopyright("Copyright © LoneWolf  2019")]
-[assembly: AssemblyTrademark("Macfhearguis")]
+[assembly: AssemblyCompany("MK Engineering")]
+[assembly: AssemblyProduct("SteamWorkshop ModID Downloader")]
+[assembly: AssemblyCopyright("Copyright © LoneWolf  2019 & Copyright © MK Enginering 2019")]
+[assembly: AssemblyTrademark("Macfhearguis & Kenneth")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
@@ -51,5 +51,6 @@ using System.Windows;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.0.0.2")]
+[assembly: AssemblyFileVersion("1.0.0.2")]
+[assembly: NeutralResourcesLanguage("en")]

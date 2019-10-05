@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace SteamCMD_Installation_Manager
+namespace SteamCMD_Mod_Collection_Manager
 {
     /// <summary>
     /// Interaction logic for App.xaml
