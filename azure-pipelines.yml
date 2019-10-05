@@ -26,10 +26,16 @@ steps:
     solution: '$(solution)'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+    msbuildArchitecture: 'x64'
 
 - task: GitHubRelease@1
   inputs:
     gitHubConnection: 'kennethFSDEV'
     repositoryName: '$(Build.Repository.Name)'
-    action: 'delete'
-    tag: '1.0.0.2'
+    action: 'create'
+    target: '$(Build.SourceVersion)'
+    tagSource: 'gitTag'
+    title: 'SteamCMD Mod Collection Manager - Alpha v1.0.0.2'
+    assets: '$(Build.ArtifactStagingDirectory)/*.exe'
+    isPreRelease: true
+    addChangeLog: false
