@@ -47,8 +47,9 @@ namespace SteamCMD_Installation_Manager.SteamCMD
                 exe.StartInfo = startInfo;
                 exe.Start();
                 exe.WaitForExit();
+                var result = exe.StandardOutput.ReadLine();
                 exe.Dispose();
-                return exe.StandardOutput.ReadLine();
+                return result;
             }
             catch
             {
@@ -89,8 +90,9 @@ namespace SteamCMD_Installation_Manager.SteamCMD
                 exe.StartInfo = startInfo;
                 exe.Start();
                 exe.WaitForExit();
+                var result = exe.StandardOutput.ReadLine();
                 exe.Dispose();
-                return exe.StandardOutput.ReadLine();
+                return result;
             }
 
             catch
