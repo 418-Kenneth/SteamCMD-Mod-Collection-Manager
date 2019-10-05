@@ -31,10 +31,10 @@ steps:
   inputs:
     gitHubConnection: 'kennethFSDEV'
     repositoryName: '$(Build.Repository.Name)'
-    action: 'edit'
+    action: 'create'
     target: '$(Build.SourceVersion)'
-    tag: '1.0.0.2'
+    tagSource: 'gitTag'
     title: 'SteamCMD Mod Collection Manager'
+    assets: '$(Build.SourceVersion)/*.exe'
     isPreRelease: true
     addChangeLog: false
-    assets: $(Build.ArtifactStagingDirectory)/*.exe
