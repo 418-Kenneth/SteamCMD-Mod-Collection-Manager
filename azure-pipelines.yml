@@ -39,6 +39,6 @@ steps:
     title: 'SteamCMD Mod Collection Manager - Alpha v1.0.0.2'
     assets: |
       $(Build.ArtifactStagingDirectory)/*
-      $(Agent.ReleaseDirectory)/*
+      $(Agent.ReleaseDirectory)/*/*
     isPreRelease: true
     addChangeLog: false
