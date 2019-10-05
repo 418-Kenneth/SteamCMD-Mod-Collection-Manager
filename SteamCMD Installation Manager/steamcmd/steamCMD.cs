@@ -28,7 +28,7 @@ namespace SteamCMD_Installation_Manager.SteamCMD
         {
             var modstring = "";
 
-            modid.ForEach(p => modstring += string.Format(" +\"workshop_download_item {0} {1}\"", gameid, p));
+            modid.ForEach(p => modstring += string.Format(" +workshop_download_item {0} {1}", gameid, p));
 
             // Use ProcessStartInfo class
             ProcessStartInfo startInfo = new ProcessStartInfo();
@@ -36,8 +36,7 @@ namespace SteamCMD_Installation_Manager.SteamCMD
             startInfo.UseShellExecute = false;
             startInfo.FileName = steamdir;
             startInfo.WindowStyle = ProcessWindowStyle.Hidden;
-            startInfo.Arguments = string.Format("+login {0} {1} +force_install_dir '{2}' {3} validate +quit", steamuser, steampass, installdir, modstring);
-            return startInfo.Arguments;
+            startInfo.Arguments = string.Format("+login {0} {1} +force_install_dir \"{2}\" {3} validate +quit", steamuser, steampass, installdir, modstring);
             
 
             try
