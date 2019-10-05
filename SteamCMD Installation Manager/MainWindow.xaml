@@ -16,8 +16,8 @@
         <TextBox x:Name="collection_id_textbox" Height="23" Margin="154,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="143" Text="1136112705"/>
         <Label Content="Steam CMD Path:" VerticalAlignment="Top" Margin="11,69,0,0" Height="26" HorizontalAlignment="Left" Width="107"/>
         <Label Content="Install Dir:" VerticalAlignment="Top" Margin="11,100,0,0" Height="26" HorizontalAlignment="Left" Width="107"/>
-        <TextBox x:Name="steam_path_textbox" Height="23" Margin="154,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="363" IsReadOnly="True"/>
-        <TextBox x:Name="install_path_textbox" Height="23" Margin="154,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="363" IsReadOnly="True"/>
+        <TextBox x:Name="steam_path_textbox" Height="23" Margin="154,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="363" IsReadOnly="True" Text="G:\steam_cmd_test\cmd\steamcmd.exe"/>
+        <TextBox x:Name="install_path_textbox" Height="23" Margin="154,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="363" IsReadOnly="True" Text="G:\steam_cmd_test\download_test"/>
         <Button x:Name="install_getpath_button" Content="Path" HorizontalAlignment="Left" Margin="118,100,0,0" VerticalAlignment="Top" Width="30" Height="23" Click="Install_getpath_button_Click"/>
         <Button x:Name="steam_getpath_button" Content="Path" HorizontalAlignment="Left" Margin="118,72,0,0" VerticalAlignment="Top" Width="30" Height="23" Click="Steam_getpath_button_Click"/>
         <TextBox x:Name="log_textbox" HorizontalAlignment="Left" Height="198" Margin="10,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="507" IsReadOnly="True"/>
