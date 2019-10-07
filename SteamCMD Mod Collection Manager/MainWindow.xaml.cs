@@ -47,7 +47,6 @@ namespace SteamCMD_Mod_Collection_Manager
             log_textbox.Text = await steamexe.DownloadMods(game_id_textbox.Text, result, install_path_textbox.Text, SteamPasswordBox.Password, steam_username_textbox.Text, steam_path_textbox.Text);
         }
 
-
         private async void RetriveModCollection(object sender, RoutedEventArgs e)
         {
             log_textbox.Text = "";
@@ -75,6 +74,7 @@ namespace SteamCMD_Mod_Collection_Manager
                 steam_username_textbox.IsEnabled = false;
                 SteamPasswordBox.IsEnabled = false;
             }
+
         }
     }
 }
