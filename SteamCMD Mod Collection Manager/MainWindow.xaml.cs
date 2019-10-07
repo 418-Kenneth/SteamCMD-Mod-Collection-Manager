@@ -74,7 +74,6 @@ namespace SteamCMD_Mod_Collection_Manager
                 steam_username_textbox.IsEnabled = false;
                 SteamPasswordBox.IsEnabled = false;
             }
-
         }
     }
 }
