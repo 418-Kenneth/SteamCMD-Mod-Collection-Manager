@@ -34,8 +34,8 @@ steps:
     repositoryName: 'kennethFSDEV/SteamCMD-Mod-Collection-Manager'
     action: 'create'
     target: '$(Build.SourceVersion)'
-    tagSource: 'userSpecifiedTag'
-    tag: '1.0.0.2'
+    tagSource: 'gitTag'
+    tagPattern: '1.*'
     title: 'SteamCMD Mod Collection Manager'
     assets: '$(Build.ArtifactStagingDirectory)/*.exe'
     isPreRelease: true
