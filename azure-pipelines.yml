@@ -37,8 +37,16 @@ steps:
     tagSource: 'userSpecifiedTag'
     tag: '1.0.0.4'
     title: 'SteamCMD Mod Collection Manager - Alpha v1.0.0.2'
+- task: GitHubRelease@1
+  inputs:
+    gitHubConnection: 'kennethFSDEV'
+    repositoryName: 'kennethFSDEV/SteamCMD-Mod-Collection-Manager'
+    action: 'create'
+    target: '$(Build.SourceVersion)'
+    tagSource: 'gitTag'
+    title: 'SteamCMD Mod Collection Manager - Alpha v1.0.0.2'
     assets: |
       $(Build.ArtifactStagingDirectory)/*
-      $(Agent.ReleaseDirectory)/*/*
+      $(Agent.ReleaseDirectory)/*
     isPreRelease: true
     addChangeLog: false
