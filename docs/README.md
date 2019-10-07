@@ -3,3 +3,5 @@ SteamCMD-Mod-Collection-Manager
 <!-- Place this tag where you want the button to render. -->
 <a class="github-button" href="https://github.com/kennethFSDEV/SteamCMD-Installation-Manager/releases" data-icon="octicon-cloud-download" data-size="large" aria-label="Download ntkme/github-buttons on GitHub">Download</a>
 Basic GUI for interaction with SteamCMD, to install mod collections.
+
+[![Github All Releases](https://img.shields.io/github/downloads/kennethFSDEV/SteamCMD-Mod-Collection-Manager/total.svg)]()
