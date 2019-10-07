@@ -4,7 +4,9 @@
 # https://docs.microsoft.com/azure/devops/pipelines/apps/windows/dot-net
 
 trigger:
-- master
+  branches:
+    include:
+      - master
 
 pool:
   vmImage: 'windows-latest'
@@ -42,9 +44,8 @@ steps:
   inputs:
     gitHubConnection: 'kennethFSDEV'
     repositoryName: 'kennethFSDEV/SteamCMD-Mod-Collection-Manager'
-    action: 'create'
+    action: 'edit'
     target: '$(Build.SourceVersion)'
-    tagSource: 'userSpecifiedTag'
     tag: '1.0.0.3'
     title: 'SteamCMD Mod Collection Manager'
     assets: |
