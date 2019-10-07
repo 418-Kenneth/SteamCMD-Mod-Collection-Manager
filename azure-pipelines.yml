@@ -26,7 +26,17 @@ steps:
     solution: '$(solution)'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-    msbuildArchitecture: 'x64'
+
+
+- task: CopyFiles@2
+  inputs:
+    Contents: |
+      *\bin\*\*.exe
+      *\bin\*\*.dll
+    TargetFolder: '$(Build.ArtifactStagingDirectory)/'
+    CleanTargetFolder: true
+    OverWrite: true
+
 
 - task: GitHubRelease@1
   inputs:
@@ -34,10 +44,12 @@ steps:
     repositoryName: 'kennethFSDEV/SteamCMD-Mod-Collection-Manager'
     action: 'create'
     target: '$(Build.SourceVersion)'
-    tagSource: 'gitTag'
-    title: 'SteamCMD Mod Collection Manager - Alpha v1.0.0.2'
+    tagSource: 'userSpecifiedTag'
+    tag: '1.0.0.3'
+    title: 'SteamCMD Mod Collection Manager'
     assets: |
-      $(Build.ArtifactStagingDirectory)/*
-      $(Agent.ReleaseDirectory)/*
+      $(Build.ArtifactStagingDirectory)/*/bin/*/*.exe
+      $(Build.ArtifactStagingDirectory)/*/bin/*/*.dll
     isPreRelease: true
     addChangeLog: false
+

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
 using System.Windows;
+using System.Threading;
 
 namespace SteamCMD_Mod_Collection_Manager.SteamCMD
 {
@@ -24,7 +25,7 @@ namespace SteamCMD_Mod_Collection_Manager.SteamCMD
         /// <param name="steamuser"></param>
         /// <param name="steamdir"></param>
         /// <returns></returns>
-        public string DownloadMods(string gameid, List<string> modid, string installdir, string steampass, string steamuser, string steamdir)
+        public async Task<string> DownloadMods(string gameid, List<string> modid, string installdir, string steampass, string steamuser, string steamdir)
         {
             var modstring = "";
 
@@ -41,6 +42,7 @@ namespace SteamCMD_Mod_Collection_Manager.SteamCMD
 
             try
             {
+                
                 // Start the process with the info we specified.
                 // Call WaitForExit and then the using statement will close.
                 Process exe = new Process();
@@ -52,50 +54,6 @@ namespace SteamCMD_Mod_Collection_Manager.SteamCMD
                 exe.Dispose();
                 return "Success";
             }
-            catch
-            {
-                return "Error";
-                // Log error.
-            }
-        }
-
-        /// <summary>
-        /// Server installation function
-        /// </summary>
-        /// <param name="gameid"></param>
-        /// <param name="modid"></param>
-        /// <param name="installdir"></param>
-        /// <param name="steampass"></param>
-        /// <param name="steamuser"></param>
-        /// <param name="steamauth"></param>
-        /// <param name="steamdir"></param>
-        /// <returns></returns>
-        public string InstallServer(string gameid, List<string> modid, string installdir, string steampass, string steamuser, string steamauth, string steamdir)
-        {
-            var modstring = "";
-
-            modid.ForEach(p => modstring = p);
-            // Use ProcessStartInfo class
-            ProcessStartInfo startInfo = new ProcessStartInfo();
-            startInfo.CreateNoWindow = false;
-            startInfo.UseShellExecute = false;
-            startInfo.FileName = steamdir;
-            startInfo.WindowStyle = ProcessWindowStyle.Hidden;
-            startInfo.Arguments = string.Format("+login {0} {1} +set_steam_guard_code {2} +force_install_dir {3} +\"workshop_download_item {4} {5}\" validate +quit", steamuser, steampass, steamauth, installdir, gameid, modid);
-
-            try
-            {
-                // Start the process with the info we specified.
-                // Call WaitForExit and then the using statement will close.
-                Process exe = new Process();
-                exe.StartInfo = startInfo;
-                exe.Start();
-                exe.WaitForExit();
-                var result = exe.StandardOutput.ReadLine();
-                exe.Dispose();
-                return result;
-            }
-
             catch
             {
                 return "Error";
