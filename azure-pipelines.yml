@@ -24,7 +24,6 @@ steps:
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
-    msbuildArgs: '--configuration Release'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
