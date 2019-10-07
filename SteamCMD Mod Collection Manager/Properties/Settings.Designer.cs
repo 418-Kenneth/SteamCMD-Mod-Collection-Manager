@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SteamCMD_Mod_Collection_Manager.Properties {
+namespace SteamCMD_Installation_Manager.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
