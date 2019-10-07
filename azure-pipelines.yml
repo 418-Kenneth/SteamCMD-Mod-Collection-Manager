@@ -48,8 +48,8 @@ steps:
     tag: '1.0.0.2'
     title: 'SteamCMD Mod Collection Manager'
     assets: |
-      $(Build.ArtifactStagingDirectory)*\bin\*\*.exe
-      $(Build.ArtifactStagingDirectory)*\bin\*\*.dll
+      $(Build.ArtifactStagingDirectory)/*/bin/*/*.exe
+      $(Build.ArtifactStagingDirectory)/*/bin/*/*.dll
     isPreRelease: true
     addChangeLog: false
 
