@@ -35,7 +35,7 @@ steps:
     action: 'create'
     target: '$(Build.SourceVersion)'
     tagSource: 'gitTag'
-    tagPattern: '*'
+    tagPattern: 'N.N.N.N'
     title: 'SteamCMD Mod Collection Manager'
     assets: '$(Build.ArtifactStagingDirectory)/*.exe'
     isPreRelease: true
