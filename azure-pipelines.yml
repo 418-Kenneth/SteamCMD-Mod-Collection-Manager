@@ -56,6 +56,5 @@ steps:
     assets: |
       $(Build.ArtifactStagingDirectory)/*/bin/*/*.exe
       $(Build.ArtifactStagingDirectory)/*/bin/*/*.dll
-    isPreRelease: true
     addChangeLog: false
 
