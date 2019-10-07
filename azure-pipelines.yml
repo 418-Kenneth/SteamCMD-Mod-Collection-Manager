@@ -7,9 +7,6 @@ trigger:
   branches:
     include:
         - master
-  tags:
-    include:
-      - 1.*
 
 
 pool:
@@ -50,11 +47,11 @@ steps:
     repositoryName: 'kennethFSDEV/SteamCMD-Mod-Collection-Manager'
     action: 'create'
     target: '$(Build.SourceVersion)'
-    tagSource: 'gitTag'
+    tagSource: 'userSpecifiedTag'
+    tag: '$(Build.BuildNumber)'
     title: 'SteamCMD Mod Collection Manager'
     assets: |
       $(Build.ArtifactStagingDirectory)/*/bin/*/*.exe
       $(Build.ArtifactStagingDirectory)/*/bin/*/*.dll
-    isPreRelease: true
     addChangeLog: false
 
