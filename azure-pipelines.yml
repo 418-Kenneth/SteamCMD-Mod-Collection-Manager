@@ -24,6 +24,10 @@ steps:
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+    msbuildArchitecture: 'x64'
+
 - task: GitHubRelease@1
   inputs:
     gitHubConnection: 'kennethFSDEV'
@@ -36,19 +40,4 @@ steps:
     assets: '$(Build.ArtifactStagingDirectory)/*.exe'
     isPreRelease: true
     addChangeLog: false
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-    msbuildArchitecture: 'x64'
 
-- task: GitHubRelease@1
-  inputs:
-    gitHubConnection: 'kennethFSDEV'
-    repositoryName: 'kennethFSDEV/SteamCMD-Mod-Collection-Manager'
-    action: 'create'
-    target: '$(Build.SourceVersion)'
-    tagSource: 'gitTag'
-    tagPattern: 'N.N.N.N'
-    title: 'SteamCMD Mod Collection Manager'
-    assets: '$(Build.ArtifactStagingDirectory)/*.exe'
-    isPreRelease: true
-    addChangeLog: false
