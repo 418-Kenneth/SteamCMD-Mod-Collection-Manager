@@ -53,6 +53,5 @@ steps:
     assets: |
       $(Build.ArtifactStagingDirectory)/*/bin/*/*.exe
       $(Build.ArtifactStagingDirectory)/*/bin/*/*.dll
-    changeLogCompareToRelease: 'lastFullRelease'
-    changeLogType: 'commitBased'
+    addChangeLog: false
 
