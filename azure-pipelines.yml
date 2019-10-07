@@ -31,8 +31,8 @@ steps:
 - task: CopyFiles@2
   inputs:
     Contents: |
-      *\bi\*\*.exe
-      *\bi\*\*.dll
+      *\bin\*\*.exe
+      *\bin\*\*.dll
     TargetFolder: '$(Build.ArtifactStagingDirectory)/'
     CleanTargetFolder: true
     OverWrite: true
