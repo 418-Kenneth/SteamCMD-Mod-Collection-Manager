@@ -6,7 +6,11 @@
 trigger:
   branches:
     include:
-        - gitTag
+        - master
+  tags:
+    include:
+      - 1.*
+
 
 pool:
   vmImage: 'windows-latest'
