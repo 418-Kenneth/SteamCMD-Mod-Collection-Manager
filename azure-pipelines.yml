@@ -6,7 +6,7 @@
 trigger:
   branches:
     include:
-      - master
+      - tag
 
 pool:
   vmImage: 'windows-latest'
