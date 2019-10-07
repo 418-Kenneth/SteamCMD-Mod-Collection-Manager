@@ -28,6 +28,16 @@ steps:
     configuration: '$(buildConfiguration)'
     msbuildArchitecture: 'x64'
 
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(Build.BinariesDirectory)'
+    Contents: '*.exe'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)/'
+    CleanTargetFolder: true
+    OverWrite: true
+
+
 - task: GitHubRelease@1
   inputs:
     gitHubConnection: 'kennethFSDEV'
@@ -37,7 +47,7 @@ steps:
     tagSource: 'userSpecifiedTag'
     tag: '1.0.0.2'
     title: 'SteamCMD Mod Collection Manager'
-    assets: '$(Build.ArtifactStagingDirectory)*.exe'
+    assets: 
     isPreRelease: true
     addChangeLog: false
 
