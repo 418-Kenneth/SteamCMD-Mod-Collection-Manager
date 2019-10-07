@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 using System.Windows;
 
-namespace SteamCMD_Installation_Manager.SteamCMD
+namespace SteamCMD_Mod_Collection_Manager.SteamCMD
 {
     public class steamCMD
     // example of code line to download

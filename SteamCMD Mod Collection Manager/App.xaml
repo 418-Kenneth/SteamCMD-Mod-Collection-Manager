@@ -1,7 +1,7 @@
-﻿<Application x:Class="SteamCMD_Installation_Manager.App"
+﻿<Application x:Class="SteamCMD_Mod_Collection_Manager.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:SteamCMD_Installation_Manager"
+             xmlns:local="clr-namespace:SteamCMD_Mod_Collection_Manager"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          

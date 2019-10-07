@@ -11,7 +11,7 @@ using System.Net.Http;
 using System.IO;
 
 
-namespace SteamCMD_Installation_Manager.HTTP_Readers
+namespace SteamCMD_Mod_Collection_Manager.HTTP_Readers
 {
     public class Get_Modcollection
     {

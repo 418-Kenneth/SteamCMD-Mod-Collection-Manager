@@ -1,11 +1,11 @@
-﻿<Window x:Class="SteamCMD_Installation_Manager.MainWindow"
+﻿<Window x:Class="SteamCMD_Mod_Collection_Manager.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:SteamCMD_Installation_Manager"
+        xmlns:local="clr-namespace:SteamCMD_Mod_Collection_Manager"
         mc:Ignorable="d"
-        Title="SteamCMD Mod Collection Manager - Alpha v1.0.1" Height="553.098" Width="536.051" Icon="steamcmd_git.ico" WindowStyle="ToolWindow" MinWidth="536" MinHeight="524">
+        Title="SteamCMD Mod Collection Manager - Alpha v1.0.0.2" Height="553.098" Width="536.051" Icon="steamcmd_git.ico" WindowStyle="ToolWindow" MinWidth="536" MinHeight="524">
     <Grid Background="#FFAEAEAE">
         <Label Content="Game ID:" VerticalAlignment="Top" Margin="11,12,0,0" Height="26" HorizontalAlignment="Left" Width="107"/>
         <Label Content="Collection ID:" VerticalAlignment="Top" Margin="11,40,0,0" Height="26" HorizontalAlignment="Left" Width="107"/>
