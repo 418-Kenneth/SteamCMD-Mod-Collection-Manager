@@ -49,9 +49,10 @@ steps:
     target: '$(Build.SourceVersion)'
     tagSource: 'userSpecifiedTag'
     tag: '$(Build.BuildNumber)'
-    title: 'SteamCMD Mod Collection Manager $(Build.BuildNumber)'
+    title: 'SteamCMD Mod Collection Manager'
     assets: |
       $(Build.ArtifactStagingDirectory)/*/bin/*/*.exe
       $(Build.ArtifactStagingDirectory)/*/bin/*/*.dll
-    addChangeLog: false
+    changeLogCompareToRelease: 'lastFullRelease'
+    changeLogType: 'commitBased'
 
