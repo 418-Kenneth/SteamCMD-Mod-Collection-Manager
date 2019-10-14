@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Forms;
 using System.Threading;
+using SteamInterfaceLib;
 
 namespace SteamCMD_Mod_Collection_Manager
 {
@@ -41,19 +42,19 @@ namespace SteamCMD_Mod_Collection_Manager
         private async void Start_download_Click(object sender, RoutedEventArgs e)
         {
             log_textbox.Text = "";
-            var steamexe = new SteamCMD.steamCMD();
-            var idlist = new HTTP_Readers.Get_Modcollection();
-            var result = await idlist.workshopids(collection_id_textbox.Text);
-            log_textbox.Text = await steamexe.DownloadMods(game_id_textbox.Text, result, install_path_textbox.Text, SteamPasswordBox.Password, steam_username_textbox.Text, steam_path_textbox.Text);
+            var steamexe = new SteamCMD();
+            var idlist = new Mods();
+            var result = await idlist.GetWorkshopIDs(collection_id_textbox.Text);
+            log_textbox.Text = steamexe.DownloadMods(game_id_textbox.Text, result, install_path_textbox.Text, SteamPasswordBox.Password, steam_username_textbox.Text, steam_path_textbox.Text);
         }
 
         private async void RetriveModCollection(object sender, RoutedEventArgs e)
         {
             log_textbox.Text = "";
-            var idlist = new HTTP_Readers.Get_Modcollection();
-            var result = await idlist.workshopids(collection_id_textbox.Text);
+            var idlist = new Mods();
+            var result = await idlist.GetCollectionIDsWithNames(collection_id_textbox.Text);
 
-            result.ForEach(a => log_textbox.AppendText(a + Environment.NewLine));
+            result.ForEach(a => log_textbox.AppendText($"{a.ModID} \t-\t {a.ModName} {Environment.NewLine}"));
         }
 
         private void anony_btn_Click(object sender, RoutedEventArgs e)
