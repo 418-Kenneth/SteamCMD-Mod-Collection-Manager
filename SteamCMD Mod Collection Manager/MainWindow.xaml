@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SteamCMD_Mod_Collection_Manager"
         mc:Ignorable="d"
-        Title="SteamCMD Mod Collection Manager (Macfhearguis edition)" Height="553.098" Width="536.051" Icon="steamcmd_git.ico" WindowStyle="ToolWindow" MinWidth="536" MinHeight="524">
+        Title="SteamCMD Mod Collection Manager" Height="553.098" Width="536.051" Icon="steamcmd_git.ico" WindowStyle="ToolWindow" MinWidth="536" MinHeight="524">
     <Grid Background="#FFAEAEAE">
         <Label Content="Game ID:" VerticalAlignment="Top" Margin="11,12,0,0" Height="26" HorizontalAlignment="Left" Width="107"/>
         <Label Content="Collection ID:" VerticalAlignment="Top" Margin="11,40,0,0" Height="26" HorizontalAlignment="Left" Width="107"/>
