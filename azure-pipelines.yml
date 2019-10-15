@@ -43,7 +43,7 @@ steps:
 
 - task: GitHubRelease@1
   inputs:
-    gitHubConnection: '418-Kenneth'
+    gitHubConnection: 'kenneth'
     repositoryName: '418-Kenneth/SteamCMD-Mod-Collection-Manager'
     action: 'create'
     target: '$(Build.SourceVersion)'
